@@ -3,21 +3,24 @@
 import ProfileSection from '@/components/ProfileSection';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useSectionVisibility } from '@/contexts/SectionVisibilityContext';
 
 export default function Home() {
   const { t } = useLanguage();
+  const { sectionVisibility } = useSectionVisibility();
 
   const sections = [
-    { title: t('section.education'), href: '/education', icon: '🎓' },
-    { title: t('section.experience'), href: '/experience', icon: '💼' },
-    { title: t('section.awards'), href: '/awards', icon: '🏆' },
-    { title: t('section.englishPapers'), href: '/english-publications', icon: '📚' },
-    { title: t('section.chinesePapers'), href: '/chinese-publications', icon: '📰' },
-    { title: t('section.cases'), href: '/case-studies', icon: '📊' },
-    { title: t('section.books'), href: '/books', icon: '📖' },
-    { title: t('section.videos'), href: '/videos', icon: '📹' },
-    { title: t('section.academicActivities') + ' & ' + t('section.businessActivities'), href: '/activities', icon: '🎯' },
-  ];
+    { title: t('section.education'), href: '/education', icon: '🎓', visible: true },
+    { title: t('section.experience'), href: '/experience', icon: '💼', visible: true },
+    { title: t('section.awards'), href: '/awards', icon: '🏆', visible: true },
+    { title: t('section.englishPapers'), href: '/english-publications', icon: '📚', visible: true },
+    { title: t('section.chinesePapers'), href: '/chinese-publications', icon: '📰', visible: sectionVisibility.chinesePublications },
+    { title: t('section.cases'), href: '/case-studies', icon: '📊', visible: sectionVisibility.caseStudies },
+    { title: t('section.books'), href: '/books', icon: '📖', visible: sectionVisibility.books },
+    { title: t('section.journalPositions') || '期刊任职', href: '/journal-positions', icon: '📰', visible: sectionVisibility.journalPositions },
+    { title: t('section.videos'), href: '/videos', icon: '📹', visible: sectionVisibility.videos },
+    { title: t('section.academicActivities') + ' & ' + t('section.businessActivities'), href: '/activities', icon: '🎯', visible: sectionVisibility.academicActivities || sectionVisibility.businessActivities },
+  ].filter(section => section.visible);
 
   return (
     <div className="bg-white">

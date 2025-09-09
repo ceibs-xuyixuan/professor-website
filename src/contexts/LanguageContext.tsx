@@ -37,6 +37,7 @@ const translations = {
     'nav.chinesePapers': '中文论文',
     'nav.cases': '案例列表',
     'nav.books': '书籍列表',
+    'nav.journalPositions': '期刊任职',
     'nav.videos': '个人视频号',
     'nav.academicActivities': '学术活动',
     'nav.businessActivities': '商业活动',
@@ -51,6 +52,7 @@ const translations = {
     'section.chinesePapers': '中文论文',
     'section.cases': '案例列表',
     'section.books': '书籍列表',
+    'section.journalPositions': '期刊任职',
     'section.videos': '个人视频号',
     'section.academicActivities': '学术活动',
     'section.businessActivities': '商业活动',
@@ -102,6 +104,24 @@ const translations = {
     'admin.quickActions': '快速操作',
     'admin.systemStatus': '系统状态',
     'admin.logout': '退出登录',
+
+    // Journal Positions
+    'journalPositions.title': '期刊任职',
+    'journalPositions.description': '在管理科学和运筹学领域顶级学术期刊担任编辑职务和审稿工作',
+    'journalPositions.categories.all': '全部',
+    'journalPositions.categories.editorialBoard': '编委会成员',
+    'journalPositions.categories.editor': '主编',
+    'journalPositions.categories.associateEditor': '副主编',
+    'journalPositions.categories.guestEditor': '客座编辑',
+    'journalPositions.categories.reviewer': '审稿人',
+    'journalPositions.current': '当前任职',
+    'journalPositions.present': '至今',
+    'journalPositions.showActiveOnly': '仅显示当前任职',
+    'journalPositions.noResults': '未找到符合条件的期刊任职记录。',
+
+    // Section Visibility
+    'sectionVisibility.title': '页面展示管理',
+    'sectionVisibility.description': '控制网站首页各个版块的显示与隐藏',
   },
   en: {
     // Navigation
@@ -113,6 +133,7 @@ const translations = {
     'nav.chinesePapers': 'Chinese Papers',
     'nav.cases': 'Case Studies',
     'nav.books': 'Books',
+    'nav.journalPositions': 'Journal Positions',
     'nav.videos': 'Video Channel',
     'nav.academicActivities': 'Academic Activities',
     'nav.businessActivities': 'Business Activities',
@@ -127,6 +148,7 @@ const translations = {
     'section.chinesePapers': 'Chinese Publications',
     'section.cases': 'Case Studies',
     'section.books': 'Books & Publications',
+    'section.journalPositions': 'Journal Editorial Positions',
     'section.videos': 'Video Channel',
     'section.academicActivities': 'Academic Activities',
     'section.businessActivities': 'Business Activities',
@@ -178,6 +200,24 @@ const translations = {
     'admin.quickActions': 'Quick Actions',
     'admin.systemStatus': 'System Status',
     'admin.logout': 'Logout',
+
+    // Journal Positions
+    'journalPositions.title': 'Journal Editorial Positions',
+    'journalPositions.description': 'Editorial positions and reviewing roles at leading academic journals in management science and operations research',
+    'journalPositions.categories.all': 'All',
+    'journalPositions.categories.editorialBoard': 'Editorial Board',
+    'journalPositions.categories.editor': 'Editor',
+    'journalPositions.categories.associateEditor': 'Associate Editor',
+    'journalPositions.categories.guestEditor': 'Guest Editor',
+    'journalPositions.categories.reviewer': 'Reviewer',
+    'journalPositions.current': 'Current',
+    'journalPositions.present': 'Present',
+    'journalPositions.showActiveOnly': 'Current positions only',
+    'journalPositions.noResults': 'No journal positions found matching the selected criteria.',
+
+    // Section Visibility
+    'sectionVisibility.title': 'Section Display Management',
+    'sectionVisibility.description': 'Control the visibility of different sections on the website homepage',
   }
 };
 

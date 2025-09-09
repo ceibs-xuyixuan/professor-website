@@ -3,24 +3,27 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useSectionVisibility } from '@/contexts/SectionVisibilityContext';
 import LanguageToggle from '@/components/LanguageToggle';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useLanguage();
+  const { sectionVisibility } = useSectionVisibility();
 
   const navigationItems = [
-    { label: t('nav.profile'), href: '/' },
-    { label: t('nav.education'), href: '/education' },
-    { label: t('nav.experience'), href: '/experience' },
-    { label: t('nav.awards'), href: '/awards' },
-    { label: t('nav.englishPapers'), href: '/english-publications' },
-    { label: t('nav.chinesePapers'), href: '/chinese-publications' },
-    { label: t('nav.cases'), href: '/case-studies' },
-    { label: t('nav.books'), href: '/books' },
-    { label: t('nav.videos'), href: '/videos' },
-    { label: t('nav.academicActivities') + ' & ' + t('nav.businessActivities'), href: '/activities' },
-  ];
+    { label: t('nav.profile'), href: '/', visible: true },
+    { label: t('nav.education'), href: '/education', visible: true },
+    { label: t('nav.experience'), href: '/experience', visible: true },
+    { label: t('nav.awards'), href: '/awards', visible: true },
+    { label: t('nav.englishPapers'), href: '/english-publications', visible: true },
+    { label: t('nav.chinesePapers'), href: '/chinese-publications', visible: sectionVisibility.chinesePublications },
+    { label: t('nav.cases'), href: '/case-studies', visible: sectionVisibility.caseStudies },
+    { label: t('nav.books'), href: '/books', visible: sectionVisibility.books },
+    { label: t('nav.journalPositions') || '期刊任职', href: '/journal-positions', visible: sectionVisibility.journalPositions },
+    { label: t('nav.videos'), href: '/videos', visible: sectionVisibility.videos },
+    { label: t('nav.academicActivities') + ' & ' + t('nav.businessActivities'), href: '/activities', visible: sectionVisibility.academicActivities || sectionVisibility.businessActivities },
+  ].filter(item => item.visible);
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">

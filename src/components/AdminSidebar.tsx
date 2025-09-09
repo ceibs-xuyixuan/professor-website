@@ -17,6 +17,7 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({ children }) => {
 
   const menuItems = [
     { name: '控制台', href: '/admin', icon: '📊' },
+    { name: '页面展示', href: '/admin/section-visibility', icon: '👁️' },
     { name: '个人简介', href: '/admin/profile', icon: '👤' },
     { name: '教育背景', href: '/admin/education', icon: '🎓' },
     { name: '工作经历', href: '/admin/experience', icon: '💼' },
@@ -25,6 +26,7 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({ children }) => {
     { name: '中文论文', href: '/admin/chinese-papers', icon: '📄' },
     { name: '案例管理', href: '/admin/cases', icon: '📋' },
     { name: '书籍管理', href: '/admin/books', icon: '📚' },
+    { name: '期刊任职', href: '/admin/journal-positions', icon: '📰' },
     { name: '视频管理', href: '/admin/videos', icon: '🎬' },
     { name: '学术活动', href: '/admin/academic-activities', icon: '🎪' },
     { name: '商业活动', href: '/admin/business-activities', icon: '🏢' },

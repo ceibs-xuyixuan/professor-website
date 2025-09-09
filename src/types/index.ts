@@ -115,6 +115,28 @@ export interface Video {
   tags: BilingualText[];
 }
 
+// Journal Position
+export interface JournalPosition {
+  journalName: BilingualText;
+  position: BilingualText;
+  startDate: string;
+  endDate?: string; // Optional for current positions
+  description?: BilingualText;
+  category: 'editorial_board' | 'reviewer' | 'editor' | 'associate_editor' | 'guest_editor';
+  isActive: boolean;
+}
+
+// Section Visibility Configuration
+export interface SectionVisibility {
+  caseStudies: boolean;
+  books: boolean;
+  journalPositions: boolean;
+  videos: boolean;
+  academicActivities: boolean;
+  businessActivities: boolean;
+  chinesePublications: boolean;
+}
+
 // Admin User
 export interface AdminUser {
   id: string;

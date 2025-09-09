@@ -1,4 +1,4 @@
-import { PersonalProfile, Education, WorkExperience, Award, Publication, CaseStudy, Book, Activity, Video, BilingualText } from '@/types';
+import { PersonalProfile, Education, WorkExperience, Award, Publication, CaseStudy, Book, Activity, Video, JournalPosition, SectionVisibility, BilingualText } from '@/types';
 
 // Personal Profile Data
 export const personalProfile: PersonalProfile = {
@@ -1072,3 +1072,155 @@ export const businessActivities: Activity[] = [
     }
   }
 ];
+
+// Journal Positions
+export const journalPositions: JournalPosition[] = [
+  {
+    journalName: {
+      zh: "运营管理期刊",
+      en: "Journal of Operations Management"
+    },
+    position: {
+      zh: "编委会成员",
+      en: "Editorial Board Member"
+    },
+    startDate: "2020",
+    description: {
+      zh: "担任国际顶级运营管理期刊编委会成员，负责审稿和学术指导工作",
+      en: "Serving as Editorial Board Member of top international operations management journal, responsible for peer review and academic guidance"
+    },
+    category: "editorial_board",
+    isActive: true
+  },
+  {
+    journalName: {
+      zh: "供应链管理期刊",
+      en: "Supply Chain Management: An International Journal"
+    },
+    position: {
+      zh: "副主编",
+      en: "Associate Editor"
+    },
+    startDate: "2018",
+    description: {
+      zh: "担任供应链管理国际期刊副主编，负责学术质量把控和编辑决策",
+      en: "Serving as Associate Editor of international supply chain management journal, responsible for academic quality control and editorial decisions"
+    },
+    category: "associate_editor",
+    isActive: true
+  },
+  {
+    journalName: {
+      zh: "管理科学学报",
+      en: "Journal of Management Sciences in China"
+    },
+    position: {
+      zh: "编委会成员",
+      en: "Editorial Board Member"
+    },
+    startDate: "2015",
+    description: {
+      zh: "担任中国管理科学学报编委会成员，促进中国管理学术研究发展",
+      en: "Serving as Editorial Board Member of Journal of Management Sciences in China, promoting the development of management academic research in China"
+    },
+    category: "editorial_board",
+    isActive: true
+  },
+  {
+    journalName: {
+      zh: "生产与运营管理",
+      en: "Production and Operations Management"
+    },
+    position: {
+      zh: "特约审稿人",
+      en: "Ad-hoc Reviewer"
+    },
+    startDate: "2010",
+    description: {
+      zh: "长期担任生产与运营管理期刊特约审稿人，参与学术论文评审工作",
+      en: "Long-term service as ad-hoc reviewer for Production and Operations Management journal, participating in academic paper review work"
+    },
+    category: "reviewer",
+    isActive: true
+  },
+  {
+    journalName: {
+      zh: "系统工程理论与实践",
+      en: "Systems Engineering Theory & Practice"
+    },
+    position: {
+      zh: "编委会成员",
+      en: "Editorial Board Member"
+    },
+    startDate: "2016",
+    description: {
+      zh: "担任系统工程理论与实践期刊编委会成员，推动系统工程理论发展",
+      en: "Serving as Editorial Board Member of Systems Engineering Theory & Practice journal, promoting the development of systems engineering theory"
+    },
+    category: "editorial_board",
+    isActive: true
+  },
+  {
+    journalName: {
+      zh: "国际商业研究期刊",
+      en: "Journal of International Business Studies"
+    },
+    position: {
+      zh: "特刊客座编辑",
+      en: "Guest Editor (Special Issue)"
+    },
+    startDate: "2022",
+    endDate: "2023",
+    description: {
+      zh: "担任《数字化供应链与全球贸易》特刊客座编辑",
+      en: "Served as Guest Editor for special issue on 'Digital Supply Chains and Global Trade'"
+    },
+    category: "guest_editor",
+    isActive: false
+  },
+  {
+    journalName: {
+      zh: "运筹学与管理科学",
+      en: "Operations Research and Management Science"
+    },
+    position: {
+      zh: "审稿专家",
+      en: "Reviewer"
+    },
+    startDate: "2008",
+    description: {
+      zh: "担任运筹学与管理科学期刊审稿专家，参与学术质量评估",
+      en: "Serving as reviewer for Operations Research and Management Science journal, participating in academic quality assessment"
+    },
+    category: "reviewer",
+    isActive: true
+  },
+  {
+    journalName: {
+      zh: "中国管理科学",
+      en: "Chinese Journal of Management Science"
+    },
+    position: {
+      zh: "编委会成员",
+      en: "Editorial Board Member"
+    },
+    startDate: "2017",
+    description: {
+      zh: "担任中国管理科学期刊编委会成员，促进中国管理科学研究国际化",
+      en: "Serving as Editorial Board Member of Chinese Journal of Management Science, promoting internationalization of Chinese management science research"
+    },
+    category: "editorial_board",
+    isActive: true
+  }
+];
+
+// Section Visibility Configuration
+export const sectionVisibility: SectionVisibility = {
+  caseStudies: true,
+  books: true,
+  journalPositions: true,
+  videos: true,
+  academicActivities: true,
+  businessActivities: true,
+  chinesePublications: true
+};
