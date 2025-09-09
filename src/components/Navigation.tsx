@@ -15,6 +15,7 @@ const Navigation = () => {
     { label: t('nav.profile'), href: '/', visible: true },
     { label: t('nav.education'), href: '/education', visible: true },
     { label: t('nav.experience'), href: '/experience', visible: true },
+    { label: t('nav.professionalExperiences') || '专业经历', href: '/professional-experiences', visible: sectionVisibility.professionalExperiences },
     { label: t('nav.awards'), href: '/awards', visible: true },
     { label: t('nav.englishPapers'), href: '/english-publications', visible: true },
     { label: t('nav.chinesePapers'), href: '/chinese-publications', visible: sectionVisibility.chinesePublications },

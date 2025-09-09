@@ -38,7 +38,8 @@ const translations = {
     'nav.cases': '案例列表',
     'nav.books': '书籍列表',
     'nav.journalPositions': '期刊任职',
-    'nav.videos': '个人视频号',
+    'nav.professionalExperiences': '专业经历',
+    'nav.videos': '个人视频',
     'nav.academicActivities': '学术活动',
     'nav.businessActivities': '商业活动',
     'nav.admin': '管理后台',
@@ -53,7 +54,8 @@ const translations = {
     'section.cases': '案例列表',
     'section.books': '书籍列表',
     'section.journalPositions': '期刊任职',
-    'section.videos': '个人视频号',
+    'section.professionalExperiences': '专业经历',
+    'section.videos': '个人视频',
     'section.academicActivities': '学术活动',
     'section.businessActivities': '商业活动',
     
@@ -122,6 +124,21 @@ const translations = {
     // Section Visibility
     'sectionVisibility.title': '页面展示管理',
     'sectionVisibility.description': '控制网站首页各个版块的显示与隐藏',
+
+    // Professional Experiences
+    'professionalExperiences.title': '专业经历',
+    'professionalExperiences.description': '行业领导、顾问职务和在商业及技术领域的专业贡献',
+    'professionalExperiences.types.all': '全部',
+    'professionalExperiences.types.consulting': '咨询顾问',
+    'professionalExperiences.types.advisory': '顾问委员',
+    'professionalExperiences.types.board': '董事职务',
+    'professionalExperiences.types.committee': '委员会',
+    'professionalExperiences.types.partnership': '合作伙伴',
+    'professionalExperiences.types.other': '其他',
+    'professionalExperiences.ongoing': '进行中',
+    'professionalExperiences.present': '至今',
+    'professionalExperiences.achievements': '主要成就：',
+    'professionalExperiences.noResults': '未找到符合选定类型的专业经历。',
   },
   en: {
     // Navigation
@@ -134,6 +151,7 @@ const translations = {
     'nav.cases': 'Case Studies',
     'nav.books': 'Books',
     'nav.journalPositions': 'Journal Positions',
+    'nav.professionalExperiences': 'Professional Experiences',
     'nav.videos': 'Video Channel',
     'nav.academicActivities': 'Academic Activities',
     'nav.businessActivities': 'Business Activities',
@@ -149,6 +167,7 @@ const translations = {
     'section.cases': 'Case Studies',
     'section.books': 'Books & Publications',
     'section.journalPositions': 'Journal Editorial Positions',
+    'section.professionalExperiences': 'Professional Experiences',
     'section.videos': 'Video Channel',
     'section.academicActivities': 'Academic Activities',
     'section.businessActivities': 'Business Activities',
@@ -218,6 +237,21 @@ const translations = {
     // Section Visibility
     'sectionVisibility.title': 'Section Display Management',
     'sectionVisibility.description': 'Control the visibility of different sections on the website homepage',
+
+    // Professional Experiences
+    'professionalExperiences.title': 'Professional Experiences',
+    'professionalExperiences.description': 'Industry leadership, advisory roles, and professional contributions in business and technology sectors',
+    'professionalExperiences.types.all': 'All',
+    'professionalExperiences.types.consulting': 'Consulting',
+    'professionalExperiences.types.advisory': 'Advisory',
+    'professionalExperiences.types.board': 'Board Position',
+    'professionalExperiences.types.committee': 'Committee',
+    'professionalExperiences.types.partnership': 'Partnership',
+    'professionalExperiences.types.other': 'Other',
+    'professionalExperiences.ongoing': 'Ongoing',
+    'professionalExperiences.present': 'Present',
+    'professionalExperiences.achievements': 'Key Achievements:',
+    'professionalExperiences.noResults': 'No professional experiences found for the selected type.',
   }
 };
 

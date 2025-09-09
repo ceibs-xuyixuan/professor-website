@@ -22,6 +22,13 @@ const config: Config = {
           900: '#0f172a',
         }
       },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+        'spin-reverse-slow': 'spin 4s linear infinite reverse',
+      },
+      boxShadow: {
+        '3xl': '0 35px 60px -12px rgba(0, 0, 0, 0.25)',
+      }
     },
   },
   plugins: [],

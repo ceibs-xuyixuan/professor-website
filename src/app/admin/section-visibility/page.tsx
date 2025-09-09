@@ -27,6 +27,13 @@ const sectionConfigs = [
     description: '展示中文学术论文和期刊发表'
   },
   {
+    key: 'professionalExperiences' as keyof SectionVisibility,
+    nameZh: '专业经历',
+    nameEn: 'Professional Experiences',
+    icon: '🎼',
+    description: '展示专业咨询、董事职务和行业领导经历'
+  },
+  {
     key: 'journalPositions' as keyof SectionVisibility,
     nameZh: '期刊任职',
     nameEn: 'Journal Positions',
@@ -35,7 +42,7 @@ const sectionConfigs = [
   },
   {
     key: 'videos' as keyof SectionVisibility,
-    nameZh: '个人视频号',
+    nameZh: '个人视频',
     nameEn: 'Video Channel',
     icon: '🎬',
     description: '展示讲座视频和学术分享'
@@ -93,7 +100,8 @@ export default function SectionVisibilityAdminPage() {
       videos: true,
       academicActivities: true,
       businessActivities: true,
-      chinesePublications: true
+      chinesePublications: true,
+      professionalExperiences: true
     };
     setTempVisibility(allVisible);
     setHasChanges(true);
@@ -107,7 +115,8 @@ export default function SectionVisibilityAdminPage() {
       videos: false,
       academicActivities: false,
       businessActivities: false,
-      chinesePublications: false
+      chinesePublications: false,
+      professionalExperiences: false
     };
     setTempVisibility(allHidden);
     setHasChanges(true);

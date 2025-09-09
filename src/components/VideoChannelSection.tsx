@@ -11,12 +11,12 @@ const VideoChannelSection = () => {
   const { language, t } = useLanguage();
 
   const categories = [
-    { value: 'all', label: t('common.all') },
-    { value: 'lecture', label: t('video.lecture') },
-    { value: 'interview', label: t('video.interview') },
-    { value: 'conference', label: t('video.conference') },
-    { value: 'tutorial', label: t('video.tutorial') },
-    { value: 'other', label: t('video.other') }
+    { value: 'all', label: t('common.all'), color: 'bg-gray-600', icon: '🎯' },
+    { value: 'lecture', label: t('video.lecture'), color: 'bg-blue-600', icon: '🎓' },
+    { value: 'interview', label: t('video.interview'), color: 'bg-green-600', icon: '🎤' },
+    { value: 'conference', label: t('video.conference'), color: 'bg-purple-600', icon: '🏛️' },
+    { value: 'tutorial', label: t('video.tutorial'), color: 'bg-orange-600', icon: '📚' },
+    { value: 'other', label: t('video.other'), color: 'bg-red-600', icon: '📹' }
   ];
 
   const filteredVideos = selectedCategory === 'all' 
@@ -33,27 +33,62 @@ const VideoChannelSection = () => {
   const formatDuration = (duration: string) => {
     return duration;
   };
+  
+  const getCategoryInfo = (category: string) => {
+    const categoryData = categories.find(c => c.value === category) || categories[0];
+    return categoryData;
+  };
+  
+  const getVideoGradient = (index: number) => {
+    const gradients = [
+      'from-blue-600 to-purple-700',
+      'from-green-600 to-teal-700',
+      'from-red-600 to-pink-700',
+      'from-orange-600 to-amber-700',
+      'from-purple-600 to-indigo-700',
+      'from-teal-600 to-cyan-700'
+    ];
+    return gradients[index % gradients.length];
+  };
 
   return (
-    <section id="videos" className="py-16 bg-academic-50">
+    <section id="videos" className="py-16 bg-gradient-to-br from-gray-50 via-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="section-title text-center">{t('section.videos')}</h2>
+        <div className="text-center mb-16">
+          <h2 className="section-title">{t('section.videos')}</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mt-4 rounded-full"></div>
+          <p className="text-gray-600 mt-6 text-lg max-w-2xl mx-auto">
+            {language === 'zh' 
+              ? '学术讲座、访谈和教学视频，分享知识和见解'
+              : 'Academic lectures, interviews and educational videos, sharing knowledge and insights'
+            }
+          </p>
+        </div>
         
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.value}
-              onClick={() => setSelectedCategory(category.value)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
-                selectedCategory === category.value
-                  ? 'bg-primary-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-primary-50 hover:text-primary-600 shadow-md'
-              }`}
-            >
-              {category.label}
-            </button>
-          ))}
+        {/* Enhanced Category Filter */}
+        <div className="mb-12">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => {
+              const isSelected = selectedCategory === category.value;
+              return (
+                <button
+                  key={category.value}
+                  onClick={() => setSelectedCategory(category.value)}
+                  className={`group flex items-center space-x-3 px-6 py-3 rounded-2xl font-medium transition-all duration-300 transform hover:scale-105 ${
+                    isSelected
+                      ? `${category.color} text-white shadow-xl`
+                      : 'bg-white text-gray-700 hover:bg-purple-50 hover:text-purple-600 shadow-lg hover:shadow-xl'
+                  }`}
+                >
+                  <span className="text-lg">{category.icon}</span>
+                  <span className="font-semibold">{category.label}</span>
+                  {isSelected && (
+                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                  )}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         {/* Video Grid */}

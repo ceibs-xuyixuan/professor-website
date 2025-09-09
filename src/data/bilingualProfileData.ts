@@ -1,4 +1,4 @@
-import { PersonalProfile, Education, WorkExperience, Award, Publication, CaseStudy, Book, Activity, Video, JournalPosition, SectionVisibility, BilingualText } from '@/types';
+import { PersonalProfile, Education, WorkExperience, Award, Publication, CaseStudy, Book, Activity, Video, JournalPosition, ProfessionalExperience, SectionVisibility, BilingualText } from '@/types';
 
 // Personal Profile Data
 export const personalProfile: PersonalProfile = {
@@ -1073,6 +1073,203 @@ export const businessActivities: Activity[] = [
   }
 ];
 
+// Professional Experiences
+export const professionalExperiences: ProfessionalExperience[] = [
+  {
+    title: {
+      zh: "世界经济论坛全球议题理事会成员",
+      en: "Member of Global Agenda Council, World Economic Forum"
+    },
+    organization: {
+      zh: "世界经济论坛",
+      en: "World Economic Forum"
+    },
+    startDate: "2018",
+    endDate: "2021",
+    description: {
+      zh: "担任世界经济论坛物流与供应链未来全球议题理事会成员，参与全球供应链政策制定和未来发展方向讨论",
+      en: "Served as member of Global Agenda Council on Future of Logistics and Supply Chain, participating in global supply chain policy development and future direction discussions"
+    },
+    type: "committee",
+    location: {
+      zh: "瑞士达沃斯",
+      en: "Davos, Switzerland"
+    },
+    achievements: [
+      {
+        zh: "参与起草《全球供应链韧性白皮书》",
+        en: "Participated in drafting the Global Supply Chain Resilience White Paper"
+      },
+      {
+        zh: "主导亚太地区供应链数字化转型研究",
+        en: "Led research on supply chain digital transformation in Asia-Pacific region"
+      }
+    ],
+    isOngoing: false
+  },
+  {
+    title: {
+      zh: "国际产业链联盟创始主席",
+      en: "Founding President of International Alliance of Industry Chain (IAIC)"
+    },
+    organization: {
+      zh: "国际产业链联盟",
+      en: "International Alliance of Industry Chain"
+    },
+    startDate: "2020",
+    description: {
+      zh: "创立并担任国际产业链联盟创始主席，致力于促进全球产业链协作与可持续发展，推动产业链数字化和绿色化转型",
+      en: "Founded and served as founding president of IAIC, committed to promoting global industrial chain cooperation and sustainable development, driving digitalization and green transformation of industrial chains"
+    },
+    type: "board",
+    location: {
+      zh: "全球",
+      en: "Global"
+    },
+    achievements: [
+      {
+        zh: "建立覆盖50+国家的产业链合作网络",
+        en: "Established industrial chain cooperation network covering 50+ countries"
+      },
+      {
+        zh: "发布《全球产业链发展指数》年度报告",
+        en: "Published annual Global Industrial Chain Development Index report"
+      },
+      {
+        zh: "组织多次国际产业链峰会",
+        en: "Organized multiple international industrial chain summits"
+      }
+    ],
+    isOngoing: true
+  },
+  {
+    title: {
+      zh: "阿里巴巴集团战略顾问",
+      en: "Strategic Advisor, Alibaba Group"
+    },
+    organization: {
+      zh: "阿里巴巴集团",
+      en: "Alibaba Group"
+    },
+    startDate: "2019",
+    endDate: "2023",
+    description: {
+      zh: "为阿里巴巴集团提供供应链战略和数字化转型咨询，参与菜鸟网络全球化布局规划",
+      en: "Provided supply chain strategy and digital transformation consulting for Alibaba Group, participated in Cainiao Network's global expansion planning"
+    },
+    type: "consulting",
+    location: {
+      zh: "杭州/上海",
+      en: "Hangzhou/Shanghai"
+    },
+    achievements: [
+      {
+        zh: "参与制定菜鸟网络五年发展战略",
+        en: "Participated in formulating Cainiao Network's five-year development strategy"
+      },
+      {
+        zh: "指导新零售供应链创新项目",
+        en: "Guided new retail supply chain innovation projects"
+      }
+    ],
+    isOngoing: false
+  },
+  {
+    title: {
+      zh: "京东集团独立董事",
+      en: "Independent Director, JD.com"
+    },
+    organization: {
+      zh: "京东集团",
+      en: "JD.com"
+    },
+    startDate: "2021",
+    description: {
+      zh: "担任京东集团独立董事，参与公司重大战略决策，监督公司治理和风险管理",
+      en: "Serving as independent director of JD.com, participating in major strategic decisions, overseeing corporate governance and risk management"
+    },
+    type: "board",
+    location: {
+      zh: "北京",
+      en: "Beijing"
+    },
+    achievements: [
+      {
+        zh: "推动供应链ESG（环境、社会、治理）实践",
+        en: "Promoted supply chain ESG (Environmental, Social, Governance) practices"
+      },
+      {
+        zh: "参与制定数字化供应链标准",
+        en: "Participated in developing digital supply chain standards"
+      }
+    ],
+    isOngoing: true
+  },
+  {
+    title: {
+      zh: "中国物流与采购联合会专家委员会主任",
+      en: "Director of Expert Committee, China Federation of Logistics and Purchasing"
+    },
+    organization: {
+      zh: "中国物流与采购联合会",
+      en: "China Federation of Logistics and Purchasing"
+    },
+    startDate: "2016",
+    description: {
+      zh: "担任中国物流与采购联合会专家委员会主任，为行业政策制定和标准建设提供专业指导",
+      en: "Serving as Director of Expert Committee at China Federation of Logistics and Purchasing, providing professional guidance for industry policy development and standard construction"
+    },
+    type: "advisory",
+    location: {
+      zh: "北京",
+      en: "Beijing"
+    },
+    achievements: [
+      {
+        zh: "参与制定《中国智慧物流发展规划》",
+        en: "Participated in formulating China Smart Logistics Development Plan"
+      },
+      {
+        zh: "推动物流行业标准化建设",
+        en: "Promoted standardization construction in logistics industry"
+      }
+    ],
+    isOngoing: true
+  },
+  {
+    title: {
+      zh: "腾讯云供应链数字化转型顾问",
+      en: "Supply Chain Digital Transformation Advisor, Tencent Cloud"
+    },
+    organization: {
+      zh: "腾讯云",
+      en: "Tencent Cloud"
+    },
+    startDate: "2022",
+    endDate: "2024",
+    description: {
+      zh: "为腾讯云提供供应链数字化转型解决方案咨询，协助开发面向制造业的供应链管理平台",
+      en: "Provided supply chain digital transformation solution consulting for Tencent Cloud, assisted in developing supply chain management platform for manufacturing industry"
+    },
+    type: "consulting",
+    location: {
+      zh: "深圳",
+      en: "Shenzhen"
+    },
+    achievements: [
+      {
+        zh: "设计制造业供应链数字化解决方案框架",
+        en: "Designed digital solution framework for manufacturing supply chain"
+      },
+      {
+        zh: "指导多个大型企业数字化转型项目",
+        en: "Guided multiple large enterprise digital transformation projects"
+      }
+    ],
+    isOngoing: false
+  }
+];
+
 // Journal Positions
 export const journalPositions: JournalPosition[] = [
   {
@@ -1222,5 +1419,6 @@ export const sectionVisibility: SectionVisibility = {
   videos: true,
   academicActivities: true,
   businessActivities: true,
-  chinesePublications: true
+  chinesePublications: true,
+  professionalExperiences: true
 };

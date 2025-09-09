@@ -12,6 +12,7 @@ export default function Home() {
   const sections = [
     { title: t('section.education'), href: '/education', icon: '🎓', visible: true },
     { title: t('section.experience'), href: '/experience', icon: '💼', visible: true },
+    { title: t('section.professionalExperiences') || '专业经历', href: '/professional-experiences', icon: '🎼', visible: sectionVisibility.professionalExperiences },
     { title: t('section.awards'), href: '/awards', icon: '🏆', visible: true },
     { title: t('section.englishPapers'), href: '/english-publications', icon: '📚', visible: true },
     { title: t('section.chinesePapers'), href: '/chinese-publications', icon: '📰', visible: sectionVisibility.chinesePublications },

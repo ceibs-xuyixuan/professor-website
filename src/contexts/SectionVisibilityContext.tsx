@@ -23,7 +23,8 @@ export const useSectionVisibility = () => {
         videos: true,
         academicActivities: true,
         businessActivities: true,
-        chinesePublications: true
+        chinesePublications: true,
+        professionalExperiences: true
       },
       updateSectionVisibility: () => {},
       setSectionVisibility: () => {}
@@ -40,7 +41,8 @@ const defaultVisibility: SectionVisibility = {
   videos: true,
   academicActivities: true,
   businessActivities: true,
-  chinesePublications: true
+  chinesePublications: true,
+  professionalExperiences: true
 };
 
 interface SectionVisibilityProviderProps {

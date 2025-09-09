@@ -39,6 +39,19 @@ export interface WorkExperience {
   responsibilities?: BilingualText[];
 }
 
+// Professional experience
+export interface ProfessionalExperience {
+  title: BilingualText;
+  organization: BilingualText;
+  startDate: string;
+  endDate?: string; // Optional for ongoing experiences
+  description: BilingualText;
+  type: 'consulting' | 'advisory' | 'board' | 'committee' | 'partnership' | 'other';
+  location?: BilingualText;
+  achievements?: BilingualText[];
+  isOngoing: boolean;
+}
+
 // Awards
 export interface Award {
   title: BilingualText;
@@ -135,6 +148,7 @@ export interface SectionVisibility {
   academicActivities: boolean;
   businessActivities: boolean;
   chinesePublications: boolean;
+  professionalExperiences: boolean;
 }
 
 // Admin User
